@@ -11,7 +11,9 @@ export default {
       'inter':['Inter', 'sans-serif'],
       'poppins':['Poppins', 'sans-serif'],
       'kaushan': ['Kaushan Script', 'cursive'],
-      'macondo': ['Macondo', 'cursive']
+      'macondo': ['Macondo', 'cursive'],
+      'platypi': ['Platypi', 'serif'],
+      'bebas':['Bebas Neue', 'sans-serif']
     },
     screens: {
       'md-lg': '930px',
