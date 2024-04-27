@@ -26,7 +26,7 @@ const Slider = () => {
                     <div className='max-w-[900px] sm:mb-8 mb-2'>
                         <h1 className='text-light-blue font-kaushan font-bold text-3xl sm:text-5xl md:text-6xl md-lg:text-7xl'>Make Yourself Overwhelmed</h1>
                     </div>
-                    <div className='max-w-[700px] px-6'>
+                    <div className='max-w-[700px] sm:px-6'>
                         <p className='object-fill text-white text-lg md:text-xl font-macondo'>Explore diverse destinations, rich cultures, and memorable experiences. Start your adventure today with our curated travel guides</p>
                     </div>
                     <button className='hover:bg-light-blue transition duration-300 ease-in-out px-4 py-2 rounded-[30px] sm:mt-10 mt-6 font-semibold text-lg z-40 text-white hover:text-white border-[3px] border-light-blue'>Explore Now</button>
