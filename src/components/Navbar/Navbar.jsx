@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
@@ -35,11 +35,11 @@ const Navbar = () => {
                         <RxCross2></RxCross2>
                     </button>
                     <NavLink onClick={handleCloseMenu} to='/'><a>Home</a></NavLink>
-                    <NavLink onClick={handleCloseMenu} to='/update-profile'><a>All Tourist Spot</a></NavLink>
+                    <NavLink onClick={handleCloseMenu} to='/all-tourists-spots'><a>All Tourist Spot</a></NavLink>
                     <NavLink onClick={handleCloseMenu} to='/add-tourist-spot'>Add Tourist Spot</NavLink>
-                    <NavLink onClick={handleCloseMenu} to='/my-list'>My List</NavLink>
-                    <NavLink to='/register' className='bg-light-blue text-center px-5 py-[6px] rounded-md text-white w-fit font-medium'>Register</NavLink>
-                    <NavLink to='/login' className='bg-light-blue font-medium text-center px-5 py-[6px] rounded-md text-white w-fit'><a>Login</a></NavLink>
+                    <NavLink onClick={handleCloseMenu} to='/my-lists'>My List</NavLink>
+                    <Link to='/register' onClick={handleCloseMenu} className='bg-light-blue text-center px-5 py-[6px] rounded-md text-white w-fit font-medium'>Register</Link>
+                    <Link to='/login' onClick={handleCloseMenu} className='bg-light-blue font-medium text-center px-5 py-[6px] rounded-md text-white w-fit'><a>Login</a></Link>
                 </div>
 
                 <button onMouseLeave={handleHideProfile} className="relative p-2">

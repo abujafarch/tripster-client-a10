@@ -4,6 +4,9 @@ import Home from "../components/Home/Home";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import NotFound from "../components/NotFound/NotFound";
+import AddTouristSpot from "../components/AddTouristSpot/AddTouristSpot";
+import AllTouristsSpots from "../components/AllTouristsSpots/AllTouristsSpots";
+import MyLists from "../components/MyList/MyLists";
 
 export const router = createBrowserRouter([
     {
@@ -22,6 +25,18 @@ export const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path:'/add-tourist-spot',
+                element: <AddTouristSpot></AddTouristSpot>
+            },
+            {
+                path: '/all-tourists-spots',
+                element: <AllTouristsSpots></AllTouristsSpots>
+            },
+            {
+                path: '/my-lists',
+                element: <MyLists></MyLists>
             }
         ]
     },

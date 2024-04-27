@@ -1,3 +1,7 @@
 .active{
-    color: #FBD1A2;
+    color: #F79256;
+}
+
+.sort-by{
+    appearance: none;
 }
