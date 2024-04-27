@@ -1,9 +1,16 @@
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { createContext, useState } from "react";
+import { app } from "../firebase/firebase.config";
 
 export const AuthContext = createContext()
 
 const AuthProvider = ({children}) => {
     const [themeChange, setThemeChange] = useState(true)
+    const auth = getAuth(app)
+
+    const createUser = (email, password) =>{
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
 
 
     // useEffect(() => {
@@ -25,7 +32,7 @@ const AuthProvider = ({children}) => {
     //     }
     // }, [upProfile])
 
-    const authInfo = {themeChange, setThemeChange}
+    const authInfo = {themeChange, setThemeChange, createUser}
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

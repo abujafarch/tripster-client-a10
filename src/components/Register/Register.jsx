@@ -5,11 +5,30 @@ import { TfiEmail } from "react-icons/tfi";
 import { CiUser } from "react-icons/ci";
 import { HiOutlinePhoto } from "react-icons/hi2";
 import { BsEyeSlash } from "react-icons/bs";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import LoginBanner from "../Login/LoginBanner";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(true)
+    const { createUser } = useContext(AuthContext)
+    const handleCreateUser = (e) => {
+        e.preventDefault()
+        const form = e.target
+        const name = form.name.value
+        const email = form.email.value
+        const photo = form.photo.value
+        const password = form.password.value
+        console.log(name, email, photo, password);
+
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
 
     return (
         <div className="md:px-5 sm:px-20 px-3 mb-10">
@@ -21,7 +40,7 @@ const Register = () => {
                     <LoginBanner></LoginBanner>
                 </div>
 
-                <form className="rounded-xl h-fit md-lg:min-w-[430px] w-full md:w-1/2">
+                <form onSubmit={handleCreateUser} className="rounded-xl h-fit md-lg:min-w-[430px] w-full md:w-1/2">
                     <h4 className="sm:text-5xl text-4xl pt-8 font-poppins text-light-blue font-semibold text-center">Welcome</h4>
                     <h1 className=" rounded-t-lg py-1 text-2xl text-dark-blue font-mont text-center font-semibold">Please Register</h1>
 
