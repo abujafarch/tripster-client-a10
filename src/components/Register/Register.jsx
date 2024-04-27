@@ -8,8 +8,6 @@ import { BsEyeSlash } from "react-icons/bs";
 import { useState } from "react";
 import LoginBanner from "../Login/LoginBanner";
 
-
-
 const Register = () => {
     const [showPassword, setShowPassword] = useState(true)
 
@@ -25,7 +23,7 @@ const Register = () => {
 
                 <form className="rounded-xl h-fit md-lg:min-w-[430px] w-full md:w-1/2">
                     <h4 className="sm:text-5xl text-4xl pt-8 font-poppins text-light-blue font-semibold text-center">Welcome</h4>
-                    <h1 className=" rounded-t-lg py-2 text-2xl text-dark-blue font-mont text-center font-semibold">Please Register</h1>
+                    <h1 className=" rounded-t-lg py-1 text-2xl text-dark-blue font-mont text-center font-semibold">Please Register</h1>
 
                     <div className="sm:px-10 px-5">
                         <div className="mt-4 flex items-center border-dark-blue border-b rounded-sm">
@@ -61,7 +59,7 @@ const Register = () => {
 
                         <button className="bg-dark-blue w-full py-2 rounded-sm mt-7 text-white font-poppins text-lg font-medium">Register</button>
 
-                        <p className="py-5 text-center font-medium font-poppins">
+                        <p className="pb-5 pt-3 text-center font-medium font-poppins">
                             Already a member? <Link to='/login' className="text-dark-blue">Login</Link>
                         </p>
                     </div>

@@ -51,7 +51,7 @@ const Navbar = () => {
                     <div onMouseEnter={handleShowProfile} onMouseLeave={handleHideProfile} title="" className={`p-2 absolute right-0 mt-2 rounded-md transition-all duration-300 ease-in-out bg-white border space-y-3 border-[#ececec] ${showProfile ? 'static' : 'hidden'}  shadow-lg`}>
 
                         <button className="w-fit">Abujafar</button>
-                        <button className='bg-[#F4A261] text-center px-5 py-[6px] rounded-md text-white w-fit'><a>Logout</a></button>
+                        <button className='bg-orange text-center px-5 py-[6px] rounded-md text-white w-fit'><a>Logout</a></button>
 
                     </div>
                 </button>
