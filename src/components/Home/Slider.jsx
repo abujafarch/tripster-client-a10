@@ -4,6 +4,7 @@ import 'swiper/css/bundle';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import { Typewriter } from 'react-simple-typewriter'
 
 const Slider = () => {
     return (
@@ -24,7 +25,17 @@ const Slider = () => {
             >
                 <div className='absolute flex max-w-[900px] mx-auto flex-col items-center w-full z-40 text-center top-[53%] sm:top-[50%] -translate-x-1/2 -translate-y-1/2 left-1/2 px-5 '>
                     <div className='max-w-[900px] sm:mb-8 mb-2'>
-                        <h1 className='text-light-blue font-kaushan font-bold text-3xl sm:text-5xl md:text-6xl md-lg:text-7xl'>Make Yourself Overwhelmed</h1>
+                        <h1 className='text-light-blue font-kaushan font-bold text-3xl sm:text-5xl md:text-6xl md-lg:text-7xl'>Make Yourself
+                            <span className='ml-3 sm:ml-4 md:ml-8'>
+                                <Typewriter
+                                    words={['Overwhelmed', 'Free', 'Curious']}
+                                    loop={Infinity}
+                                    typeSpeed={120}
+                                    deleteSpeed={100}
+                                    delaySpeed={3000}
+                                />
+                            </span>
+                        </h1>
                     </div>
                     <div className='max-w-[700px] sm:px-6'>
                         <p className='object-fill text-white text-lg md:text-xl font-macondo'>Explore diverse destinations, rich cultures, and memorable experiences. Start your adventure today with our curated travel guides</p>
