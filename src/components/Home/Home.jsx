@@ -1,3 +1,4 @@
+import GetLost from "./GetLost";
 import Slider from "./Slider";
 import TouristSpots from "./TouristSpot/TouristSpots";
 
@@ -7,6 +8,7 @@ const Home = () => {
             <div className="">
                 <Slider></Slider>
                 <TouristSpots></TouristSpots>
+                <GetLost></GetLost>
             </div>
         </div>
     );
