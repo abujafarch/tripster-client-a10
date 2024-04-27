@@ -23,6 +23,7 @@ const Slider = () => {
                 modules={[Navigation, Autoplay]}
                 className='relative mySwiper h-[550px] md:h-[870px]'
             >
+
                 <div className='absolute flex max-w-[900px] mx-auto flex-col items-center w-full z-40 text-center top-[53%] sm:top-[50%] -translate-x-1/2 -translate-y-1/2 left-1/2 px-5 '>
                     <div className='max-w-[900px] sm:mb-8 mb-2'>
                         <h1 className='text-light-blue font-kaushan font-bold text-3xl sm:text-5xl md:text-6xl md-lg:text-7xl'>Make Yourself

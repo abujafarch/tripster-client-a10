@@ -1,9 +1,12 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
+import ThemeControl from "../Home/ThemeControl";
 
 const Navbar = () => {
+    const location = useLocation()
+
     const [showProfile, setShowProfile] = useState(false)
     const [showMenu, setShowMenu] = useState(false)
     const handleShowProfile = () => {
@@ -13,12 +16,13 @@ const Navbar = () => {
         setShowProfile(false)
     }
 
-    const handleShowMenu = () =>{
+    const handleShowMenu = () => {
         setShowMenu(true)
     }
-    const handleCloseMenu = () =>{
+    const handleCloseMenu = () => {
         setShowMenu(false)
     }
+
 
     return (
         <div className='flex justify-between w-full  items-center z-20 absolute top-3 md-lg:top-8 left-1/2 -translate-x-1/2 bg-transparent max-w-[1440px] px-3'>
@@ -29,7 +33,7 @@ const Navbar = () => {
                 <NavLink to='/'><h1 className='text-light-blue font-extrabold font-kaushan text-4xl sm:text-5xl text-left'>Tripster</h1></NavLink>
             </div>
             <div className='flex gap-5 text-lg font-macondo text-[#264653] items-center'>
-                <div className={`flex flex-col fixed -top-7 ${showMenu ?'left-0':'-left-80'} transition-all font-semibold duration-400 z-20 bg-white h-screen gap-4 text-lg shadow-2xl text-light-blue md-lg:gap-5 md-lg:bg-transparent md-lg:p-0 p-5 md-lg:h-fit md-lg:items-center md-lg:static md-lg:flex-row md-lg:transition-none md-lg:w-full w-60 md-lg:shadow-none`}>
+                <div className={`flex flex-col fixed -top-7 ${showMenu ? 'left-0' : '-left-80'} transition-all font-semibold duration-400 z-20 bg-white h-screen gap-4 text-lg shadow-2xl text-light-blue md-lg:gap-5 md-lg:bg-transparent md-lg:p-0 p-5 md-lg:h-fit md-lg:items-center md-lg:static md-lg:flex-row md-lg:transition-none md-lg:w-full w-60 md-lg:shadow-none`}>
 
                     <button onClick={handleCloseMenu} className="text-2xl md-lg:hidden flex justify-end">
                         <RxCross2></RxCross2>
@@ -43,7 +47,7 @@ const Navbar = () => {
                 </div>
 
                 <button onMouseLeave={handleHideProfile} className="relative p-2">
-                    <div onMouseEnter={handleShowProfile}  className="w-[35px] h-[35px] flex items-center justify-center">
+                    <div onMouseEnter={handleShowProfile} className="w-[35px] h-[35px] flex items-center justify-center">
                         <img src={''} className="w-full h-full object-cover border-2 rounded-full border-[#F4A261]" />
                     </div>
 
@@ -54,6 +58,9 @@ const Navbar = () => {
 
                     </div>
                 </button>
+                <div className={`${location.pathname === '/' ? 'block' : 'hidden'}`}>
+                    <ThemeControl></ThemeControl>
+                </div>
             </div>
         </div>
     );
