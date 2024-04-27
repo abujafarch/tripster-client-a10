@@ -8,6 +8,7 @@ import AddTouristSpot from "../components/AddTouristSpot/AddTouristSpot";
 import AllTouristsSpots from "../components/AllTouristsSpots/AllTouristsSpots";
 import MyLists from "../components/MyList/MyLists";
 import UpdateSpot from "../components/UpdateSpot/UpdateSpot";
+import ViewDetails from "../components/ViewDetails/ViewDetails";
 
 export const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
             {
                 path: '/update-spot',
                 element:<UpdateSpot></UpdateSpot>
+            },
+            {
+                path:'/view-details',
+                element:<ViewDetails></ViewDetails>
             }
         ]
     },
