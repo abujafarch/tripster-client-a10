@@ -16,7 +16,7 @@ const MyList = () => {
                 <p>Time: 7Days</p>
             </div>
             <div className="flex justify-between mx-2 mb-3">
-                <Link>
+                <Link to='/update-spot'>
                     <button className="py-2 px-5 bg-light-blue rounded-sm text-white font-macondo text-lg">Update</button>
                 </Link>
                 <button className="py-2 px-5 bg-orange rounded-sm text-white font-macondo text-lg">Delete</button>
