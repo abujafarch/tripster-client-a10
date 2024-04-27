@@ -28,9 +28,8 @@ const Navbar = () => {
             <div>
                 <NavLink to='/'><h1 className='text-light-blue font-extrabold font-kaushan text-4xl sm:text-5xl text-left'>Tripster</h1></NavLink>
             </div>
-            <div className='flex gap-5 text-lg font-medium text-[#264653] items-center'>
-            {/* flex flex-col fixed top-0 transition-all duration-400 z-20 bg-white  h-screen gap-4 text-lg shadow-2xl font-medium */}
-                <div className={`flex flex-col fixed -top-7 ${showMenu ?'left-0':'-left-80'} transition-all duration-400 z-20 bg-white h-screen gap-4 text-lg shadow-2xl font-medium text-light-blue md-lg:gap-5 md-lg:bg-transparent md-lg:p-0 p-5 md-lg:h-fit md-lg:items-center md-lg:static md-lg:flex-row md-lg:transition-none md-lg:w-full w-60 md-lg:shadow-none`}>
+            <div className='flex gap-5 text-lg font-macondo text-[#264653] items-center'>
+                <div className={`flex flex-col fixed -top-7 ${showMenu ?'left-0':'-left-80'} transition-all font-semibold duration-400 z-20 bg-white h-screen gap-4 text-lg shadow-2xl text-light-blue md-lg:gap-5 md-lg:bg-transparent md-lg:p-0 p-5 md-lg:h-fit md-lg:items-center md-lg:static md-lg:flex-row md-lg:transition-none md-lg:w-full w-60 md-lg:shadow-none`}>
 
                     <button onClick={handleCloseMenu} className="text-2xl md-lg:hidden flex justify-end">
                         <RxCross2></RxCross2>
@@ -39,8 +38,8 @@ const Navbar = () => {
                     <NavLink onClick={handleCloseMenu} to='/update-profile'><a>All Tourist Spot</a></NavLink>
                     <NavLink onClick={handleCloseMenu} to='/add-tourist-spot'>Add Tourist Spot</NavLink>
                     <NavLink onClick={handleCloseMenu} to='/my-list'>My List</NavLink>
-                    <NavLink to='/register' className='bg-light-blue text-center px-5 py-[6px] rounded-md text-white w-fit'>Register</NavLink>
-                    <NavLink to='/login' className='bg-light-blue text-center px-5 py-[6px] rounded-md text-white w-fit'><a>Login</a></NavLink>
+                    <NavLink to='/register' className='bg-light-blue text-center px-5 py-[6px] rounded-md text-white w-fit font-medium'>Register</NavLink>
+                    <NavLink to='/login' className='bg-light-blue font-medium text-center px-5 py-[6px] rounded-md text-white w-fit'><a>Login</a></NavLink>
                 </div>
 
                 <button onMouseLeave={handleHideProfile} className="relative p-2">
