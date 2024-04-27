@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const TouristSpot = () => {
     return (
-        <div className="rounded-md relative h-[500px]">
+        <div className="rounded-md relative h-[550px]">
             <div className="mb-3 h-full">
                 <img className="h-full object-cover object-center" src="https://i.ibb.co/xqvd6GN/tiger.jpg" />
             </div>
