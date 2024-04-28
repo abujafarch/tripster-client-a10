@@ -12,7 +12,7 @@ import toast from "react-hot-toast";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
-    const { loginUser, setLoading, googleLogin } = useContext(AuthContext)
+    const { loginUser, setLoading, googleLogin, githubLogin } = useContext(AuthContext)
 
     const location = useLocation()
     const navigate = useNavigate()
@@ -45,7 +45,12 @@ const Login = () => {
     }
 
     const handleGithubLogin = () => {
-
+        githubLogin()
+            .then(() => {
+                toast.success('Logged in Successfully')
+                navigate(`${location?.state ? location.state : '/'}`)
+            })
+            .catch(error => { console.log(error) })
     }
 
     return (
