@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsEye } from "react-icons/bs";
 import { TfiLock } from "react-icons/tfi";
 import { TfiEmail } from "react-icons/tfi";
@@ -8,10 +8,16 @@ import { BsEyeSlash } from "react-icons/bs";
 import { useContext, useState } from "react";
 import LoginBanner from "../Login/LoginBanner";
 import { AuthContext } from "../../provider/AuthProvider";
+import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-    const [showPassword, setShowPassword] = useState(true)
-    const { createUser } = useContext(AuthContext)
+    const [showPassword, setShowPassword] = useState(false)
+    const { createUser, setLoading, auth, setUpdateProfile } = useContext(AuthContext)
+    const pattern = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
+    const location = useLocation()
+    const navigate = useNavigate()
+
     const handleCreateUser = (e) => {
         e.preventDefault()
         const form = e.target
@@ -21,11 +27,26 @@ const Register = () => {
         const password = form.password.value
         console.log(name, email, photo, password);
 
+        if (!pattern.test(password) || password.length < 6) {
+            toast.error('You have to use minimum 6 letter with at least one uppercase and one lowercase letter')
+            return
+        }
+
         createUser(email, password)
-            .then(result => {
-                console.log(result.user)
+            .then(() => {
+                navigate(`${location?.state ? location.state : '/'}`)
+                updateProfile(auth.currentUser, {
+                    displayName: name,
+                    photoURL: photo
+                })
+                    .then(() => { setUpdateProfile(true) })
+                    .catch((error) => console.log(error))
+
+                toast.success("Congratulation! Registration Successful")
             })
             .catch(error => {
+                toast.error('Already exist this email or your network problem')
+                setLoading(false)
                 console.log(error.message);
             })
     }

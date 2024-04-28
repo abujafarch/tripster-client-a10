@@ -10,7 +10,7 @@ const TouristSpot = () => {
                 <div className="absolute left-7 bottom-7 text-[#e7e7e7]">
                     <h1 className="font-platypi text-4xl font-bold mb-3">Sundarban</h1>
                     <p className="font-bebas text-2xl mb-3">$2000</p>
-                    <Link>
+                    <Link to='/view-details'>
                         <button className="p-2 border-2 font-bebas border-[#e7e7e7] rounded-sm">View Details</button>
                     </Link>
                 </div>

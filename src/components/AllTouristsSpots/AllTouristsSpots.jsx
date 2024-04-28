@@ -14,7 +14,7 @@ const AllTouristsSpots = () => {
         <div className="mb-12">
             <div className="h-[400px] relative">
                 <img className="h-full w-full object-cover object-center" src="https://i.ibb.co/z7dqvW8/combodia.jpg"/>
-                <div className="z-20 w-full absolute left-1/2 top-[22%] sm:top-[35%] -translate-x-1/2">
+                <div className="z-10 w-full absolute left-1/2 top-[22%] sm:top-[35%] -translate-x-1/2">
                     <h1 className="font-kaushan w-full text-center sm:text-5xl text-3xl font-bold text-[#e2e2e2]">All Tourists Spot</h1>
                     <p className="text-[#e2e2e2] mt-4 sm:mt-8 max-w-[800px] mx-auto px-2 font-macondo text-lg text-center">Asia, the world's largest continent, is a treasure trove of diversity. From the majestic Himalayas to the serene beaches of Southeast Asia, it offers iconic landmarks, rich cultures, and breathtaking natural beauty</p>
                 </div>

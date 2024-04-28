@@ -9,13 +9,15 @@ import AllTouristsSpots from "../components/AllTouristsSpots/AllTouristsSpots";
 import MyLists from "../components/MyList/MyLists";
 import UpdateSpot from "../components/UpdateSpot/UpdateSpot";
 import ViewDetails from "../components/ViewDetails/ViewDetails";
+import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
+import CountrySpots from "../components/CountrySpots/CountrySpots";
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element:<Root></Root>,
-        errorElement:<NotFound></NotFound>,
-        children:[
+        element: <Root></Root>,
+        errorElement: <NotFound></NotFound>,
+        children: [
             {
                 path: '/',
                 element: <Home></Home>
@@ -29,8 +31,8 @@ export const router = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path:'/add-tourist-spot',
-                element: <AddTouristSpot></AddTouristSpot>
+                path: '/add-tourist-spot',
+                element: <PrivetRoute><AddTouristSpot></AddTouristSpot></PrivetRoute>
             },
             {
                 path: '/all-tourists-spots',
@@ -38,15 +40,19 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/my-lists',
-                element: <MyLists></MyLists>
+                element: <PrivetRoute><MyLists></MyLists></PrivetRoute>
             },
             {
                 path: '/update-spot',
-                element:<UpdateSpot></UpdateSpot>
+                element: <PrivetRoute><UpdateSpot></UpdateSpot></PrivetRoute>
             },
             {
-                path:'/view-details',
-                element:<ViewDetails></ViewDetails>
+                path: '/view-details',
+                element: <PrivetRoute><ViewDetails></ViewDetails></PrivetRoute>
+            },
+            {
+                path: '/country-spots',
+                element: <CountrySpots></CountrySpots>
             }
         ]
     },
