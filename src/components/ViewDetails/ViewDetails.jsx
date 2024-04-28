@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet-async";
+
 const ViewDetails = () => {
     return (
         <div className="sm:mt-28 mt-20 max-w-[1300px] mx-auto px-3 sm:px-5">
+            <Helmet>
+                <title>Details of Spot | Tripster</title>
+            </Helmet>
             <img className="rounded-md w-full" src="https://i.ibb.co/CPkhyJJ/vietnam-f.jpg" />
             <h1 className="mt-5 font-platypi sm:text-4xl text-3xl md:text-5xl mb-2">Gracefully Sundarban</h1>
             <p className="text-xl font-semibold text-[#9e9e9e]">Bangladesh | Sundarban</p>

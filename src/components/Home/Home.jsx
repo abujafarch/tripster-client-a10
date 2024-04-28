@@ -6,11 +6,15 @@ import Slider from "./Slider";
 import TopReviews from "./TopReviews";
 import TouristSpots from "./TouristSpot/TouristSpots";
 import { AuthContext } from "../../provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     const { themeChange } = useContext(AuthContext)
     return (
         <div data-theme={`${themeChange ? 'light' : 'dark'}`}>
+            <Helmet>
+                <title>Tripster Home | Tripster</title>
+            </Helmet>
             <div className="relative">
                 <Slider></Slider>
                 <TouristSpots></TouristSpots>

@@ -9,6 +9,7 @@ import { useContext, useState } from "react";
 import LoginBanner from "./LoginBanner";
 import { AuthContext } from "../../provider/AuthProvider";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -56,9 +57,9 @@ const Login = () => {
     return (
         <div className="md:px-5 sm:px-20 px-3 mb-10">
             <div className="md-lg:mt-[170px] mt-28 mx-auto shadow-my-shadow rounded-xl h-[500px] items-center flex gap-2 justify-center md-lg:w-fit w-full">
-                {/* <Helmet>
-                <title>Login | Utopia</title>
-                </Helmet> */}
+                <Helmet>
+                    <title>Login | Tripster</title>
+                </Helmet>
 
                 <div className="max-w-[430px] w-1/2 hidden md:block">
                     <LoginBanner></LoginBanner>

@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
 import MyList from "./MyList";
 
 const MyLists = () => {
     return (
         <div className="mb-12">
+            <Helmet>
+                <title>My Lists | Tripster</title>
+            </Helmet>
             <div className="h-[400px] relative">
                 <img className="h-full w-full object-cover object-center" src="https://i.ibb.co/YZjth5K/mangrove-forest-in-phang-nga-bay-4k-thailand-b-Wtoa2a-Um-Zqara-Wkp-JRob-Wllr-Wdma2-U.jpg" />
                 <div className="z-20 w-full absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">

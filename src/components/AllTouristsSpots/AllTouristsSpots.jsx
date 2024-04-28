@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AllTouristSpot from "./AllTouristSpot";
 import { IoIosArrowDown } from "react-icons/io";
+import { Helmet } from "react-helmet-async";
 
 const AllTouristsSpots = () => {
     const [selectedValue, setSelectedValue] = useState('')
@@ -12,6 +13,9 @@ const AllTouristsSpots = () => {
 
     return (
         <div className="mb-12">
+            <Helmet>
+                <title>All Tourists Spot | Tripster</title>
+            </Helmet>
             <div className="h-[400px] relative">
                 <img className="h-full w-full object-cover object-center" src="https://i.ibb.co/z7dqvW8/combodia.jpg"/>
                 <div className="z-10 w-full absolute left-1/2 top-[22%] sm:top-[35%] -translate-x-1/2">
