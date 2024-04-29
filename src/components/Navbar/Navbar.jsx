@@ -66,7 +66,7 @@ const Navbar = () => {
                                 user && <NavLink onClick={handleCloseMenu} to='/add-tourist-spot'>Add Tourist Spot</NavLink>
                             }
                             {
-                                user && <NavLink onClick={handleCloseMenu} to='/my-lists'>My List</NavLink>
+                                user && <NavLink onClick={handleCloseMenu} to={`/my-lists/${user.email}`}>My List</NavLink>
                             }
                             {
                                 !user && <Link to='/register' onClick={handleCloseMenu} className='bg-light-blue text-center px-5 py-[6px] rounded-md text-white w-fit font-medium'>Register</Link>

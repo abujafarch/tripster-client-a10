@@ -20,7 +20,8 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: ()=> fetch('http://localhost:5000/tourist-spots')
             },
             {
                 path: '/login',
@@ -36,19 +37,23 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/all-tourists-spots',
-                element: <AllTouristsSpots></AllTouristsSpots>
+                element: <AllTouristsSpots></AllTouristsSpots>,
+                loader: () => fetch('http://localhost:5000/tourist-spots')
             },
             {
-                path: '/my-lists',
-                element: <PrivetRoute><MyLists></MyLists></PrivetRoute>
+                path: '/my-lists/:email',
+                element: <PrivetRoute><MyLists></MyLists></PrivetRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/my-lists/${params.email}`)
             },
             {
-                path: '/update-spot',
-                element: <PrivetRoute><UpdateSpot></UpdateSpot></PrivetRoute>
+                path: '/update-spot/:id',
+                element: <PrivetRoute><UpdateSpot></UpdateSpot></PrivetRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/update-spot/${params.id}`)
             },
             {
-                path: '/view-details',
-                element: <PrivetRoute><ViewDetails></ViewDetails></PrivetRoute>
+                path: '/view-details/:id',
+                element: <PrivetRoute><ViewDetails></ViewDetails></PrivetRoute>,
+                loader: ({params})=> fetch(`http://localhost:5000/view-details/${params.id}`)
             },
             {
                 path: '/country-spots',

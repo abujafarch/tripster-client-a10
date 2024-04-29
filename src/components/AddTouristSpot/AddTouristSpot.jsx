@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2'
+
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../provider/AuthProvider";
@@ -34,6 +36,23 @@ const AddTouristSpot = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                form.reset()
+                if(data.insertedId){
+                    Swal.fire({
+                        title: 'Success!',
+                        text: `${tourists_spot_name} added Successfully`,
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+                }
+                else{
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Something went wrong',
+                        icon: 'error',
+                        confirmButtonText: 'Ok'
+                    })
+                }
             })
     }
 
@@ -60,7 +79,14 @@ const AddTouristSpot = () => {
                         </div>
                         <div >
                             <p className="text-lg mb-1 font-macondo text-light-blue">Country Name</p>
-                            <input type="text" required name="country" className="pr-2 text-lg font-macondo w-full pl-1 py-2 rounded-sm outline-none border border-light-blue" placeholder="Country Name" />
+                            <select name="country" className="pr-2 text-lg font-macondo w-full pl-1 py-2 rounded-sm outline-none border border-light-blue">
+                                <option value="Bangladesh">Bangladesh</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Vietnam">Vietnam</option>
+                            </select>
                         </div>
                         <div >
                             <p className="text-lg mb-1 font-macondo text-light-blue">Location</p>
