@@ -3,7 +3,7 @@ import Country from "./Country";
 import { useEffect, useState } from "react";
 
 const Countries = () => {
-    const [countries, setCountries] = useState()
+    const [countries, setCountries] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:5000/countries')
@@ -19,7 +19,7 @@ const Countries = () => {
             <h1 className="font-platypi sm:text-4xl text-3xl md:text-5xl text-light-blue text-center font-bold">Browse Countries</h1>
             <div className="md:mt-20 sm:mt-12 mt-8 grid md-lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
                 {
-                    // countries.map(country=><Link key={country._id}><Country country={country} ></Country></Link>)
+                    countries.map(country=><Link key={country._id}><Country country={country} ></Country></Link>)
                 }
             </div>
         </div>
