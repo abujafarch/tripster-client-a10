@@ -5,7 +5,7 @@ const AllTouristSpot = ({ touristSpot }) => {
     return (
         <div className="border border-[#dadada]">
             <div className="relative">
-                <img className="h-[300px] object-cover object-center" src={image} />
+                <img className="h-[300px] w-full object-cover object-center" src={image} />
                 <div className="absolute left-3 bottom-3 text-white p-3 bg-[#00000050]">
                     <h2 className="font-platypi text-3xl">${average_cost}</h2>
                     <p className="font-raleway text-lg font-medium">best for <span className="font-platypi font-semibold">{seasonality}</span></p>

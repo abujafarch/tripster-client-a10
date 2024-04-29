@@ -1,6 +1,5 @@
 import { Fade, Slide } from "react-awesome-reveal";
 
-
 const Country = ({ country }) => {
     const { country_name, image, description } = country
     return (

@@ -46,7 +46,7 @@ const UpdateSpot = () => {
     return (
         <div className="relative">
             <Helmet>
-                <title>Update Spot | Tripster</title>
+                <title>Update {tourists_spot_name} | Tripster</title>
             </Helmet>
             <div className="md:h-[400px] h-[300px] relative">
                 <img className="h-full w-full object-cover object-center" src="https://i.ibb.co/nLkwCxy/malaysia-f.jpg" />

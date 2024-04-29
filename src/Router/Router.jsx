@@ -56,8 +56,9 @@ export const router = createBrowserRouter([
                 loader: ({params})=> fetch(`http://localhost:5000/view-details/${params.id}`)
             },
             {
-                path: '/country-spots',
-                element: <CountrySpots></CountrySpots>
+                path: '/:countryName',
+                element: <CountrySpots></CountrySpots>,
+                loader: ({params})=> fetch(`http://localhost:5000/${params.countryName}`)
             }
         ]
     },

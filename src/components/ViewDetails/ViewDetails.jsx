@@ -8,7 +8,7 @@ const ViewDetails = () => {
     return (
         <div className="sm:mt-28 mt-20 max-w-[1300px] mx-auto px-3 sm:px-5">
             <Helmet>
-                <title>Details of Spot | Tripster</title>
+                <title>{tourists_spot_name} | Tripster</title>
             </Helmet>
             <img className="rounded-md w-full" src={image} />
             <h1 className="mt-5 font-platypi sm:text-4xl text-3xl md:text-5xl mb-2">{tourists_spot_name}</h1>
