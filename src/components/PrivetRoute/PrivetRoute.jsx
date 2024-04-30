@@ -6,7 +6,7 @@ const PrivetRoute = ({ children }) => {
     const { user } = useContext(AuthContext)
     const location = useLocation()
     const myListsPath = location.pathname.includes("my-lists")
-    const userEmailPath = `/my-lists/${user.email}`
+    const userEmailPath = `/my-lists/${user?.email}`
     // console.log(location)
     // console.log(allProtectedPath)
 
