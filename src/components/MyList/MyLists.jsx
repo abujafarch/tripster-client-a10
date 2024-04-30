@@ -4,7 +4,6 @@ import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
 
 const MyLists = () => {
-
     const myLists = useLoaderData()
     const [newMyLists, setNewMyLists] = useState(myLists)
 

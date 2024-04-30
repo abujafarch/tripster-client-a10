@@ -13,7 +13,7 @@ const Home = () => {
     const { themeChange } = useContext(AuthContext)
     const touristSpots = useLoaderData()
     const slicedTouristSpots = touristSpots.slice(3, 9)
-    console.log(slicedTouristSpots)
+    // console.log(slicedTouristSpots)
 
     return (
         <div data-theme={`${themeChange ? 'light' : 'dark'}`}>

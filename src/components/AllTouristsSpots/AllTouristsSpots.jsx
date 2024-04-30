@@ -8,7 +8,7 @@ const AllTouristsSpots = () => {
     const touristSpots = useLoaderData()
     const duplicatedTouristSpots = [...touristSpots]
     const [touristSpotsSort, setTouristSpotsSort] = useState(touristSpots)
-    console.log(touristSpots)
+    // console.log(touristSpots)
 
     const handleSelectValue = (e) => {
         if (e.target.value === 'LowToHigh') {
