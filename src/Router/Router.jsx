@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: ()=> fetch('http://localhost:5000/tourist-spots')
+                loader: () => fetch('http://localhost:5000/tourist-spots')
             },
             {
                 path: '/login',
@@ -53,12 +53,12 @@ export const router = createBrowserRouter([
             {
                 path: '/view-details/:id',
                 element: <PrivetRoute><ViewDetails></ViewDetails></PrivetRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/view-details/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/view-details/${params.id}`)
             },
             {
                 path: '/:countryName',
                 element: <CountrySpots></CountrySpots>,
-                loader: ({params})=> fetch(`http://localhost:5000/${params.countryName}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/${params.countryName}`)
             }
         ]
     },
