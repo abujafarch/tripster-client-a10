@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/tourist-spots')
+                loader: () => fetch('https://tripster-server-a10.vercel.app/tourist-spots')
             },
             {
                 path: '/login',
@@ -38,27 +38,27 @@ export const router = createBrowserRouter([
             {
                 path: '/all-tourists-spots',
                 element: <AllTouristsSpots></AllTouristsSpots>,
-                loader: () => fetch('http://localhost:5000/tourist-spots')
+                loader: () => fetch('https://tripster-server-a10.vercel.app/tourist-spots')
             },
             {
                 path: '/my-lists/:email',
                 element: <PrivetRoute><MyLists></MyLists></PrivetRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/my-lists/${params.email}`)
+                loader: ({ params }) => fetch(`https://tripster-server-a10.vercel.app/my-lists/${params.email}`)
             },
             {
                 path: '/update-spot/:id',
                 element: <PrivetRoute><UpdateSpot></UpdateSpot></PrivetRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/update-spot/${params.id}`)
+                loader: ({ params }) => fetch(`https://tripster-server-a10.vercel.app/update-spot/${params.id}`)
             },
             {
                 path: '/view-details/:id',
                 element: <PrivetRoute><ViewDetails></ViewDetails></PrivetRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/view-details/${params.id}`)
+                loader: ({ params }) => fetch(`https://tripster-server-a10.vercel.app/view-details/${params.id}`)
             },
             {
                 path: '/:countryName',
                 element: <CountrySpots></CountrySpots>,
-                loader: ({ params }) => fetch(`http://localhost:5000/${params.countryName}`)
+                loader: ({ params }) => fetch(`https://tripster-server-a10.vercel.app/${params.countryName}`)
             }
         ]
     },

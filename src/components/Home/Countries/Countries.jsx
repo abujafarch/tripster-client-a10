@@ -6,7 +6,7 @@ const Countries = () => {
     const [countries, setCountries] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/countries')
+        fetch('https://tripster-server-a10.vercel.app/countries')
             .then(res => res.json())
             .then(data=>{
                 setCountries(data)

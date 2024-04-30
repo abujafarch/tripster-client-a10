@@ -26,7 +26,7 @@ const AddTouristSpot = () => {
         const newSpot = { image, tourists_spot_name, country_name, location, short_description, average_cost, seasonality, travel_time, totalVisitorPerYear, user_email, user_name }
         console.log(newSpot)
 
-        fetch('http://localhost:5000/add-spot', {
+        fetch('https://tripster-server-a10.vercel.app/add-spot', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

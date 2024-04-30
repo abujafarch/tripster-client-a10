@@ -22,7 +22,7 @@ const UpdateSpot = () => {
         const updatedSpot = { image, tourists_spot_name, country_name, location, short_description, average_cost, seasonality, travel_time, totalVisitorPerYear }
         console.log(updatedSpot)
 
-        fetch(`http://localhost:5000/update-spot/${_id}`, {
+        fetch(`https://tripster-server-a10.vercel.app/update-spot/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

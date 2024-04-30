@@ -15,7 +15,7 @@ const MyList = ({ myList, setNewMyLists, newMyLists }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/my-lists/${_id}`, {
+                fetch(`https://tripster-server-a10.vercel.app/my-lists/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
