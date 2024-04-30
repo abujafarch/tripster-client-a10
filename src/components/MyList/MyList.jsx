@@ -1,7 +1,39 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const MyList = ({myList}) => {
-    const { _id ,average_cost, image, seasonality, totalVisitorPerYear, tourists_spot_name, travel_time } = myList
+const MyList = ({ myList, setNewMyLists, newMyLists }) => {
+    const { _id, average_cost, image, seasonality, totalVisitorPerYear, tourists_spot_name, travel_time } = myList
+
+    const handleDelete = () => {
+        Swal.fire({
+            title: `Are you sure to delete ${tourists_spot_name}`,
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/my-lists/${_id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            const filteredLists = newMyLists.filter(myList => _id !== myList._id)
+                            setNewMyLists(filteredLists)
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: `${tourists_spot_name} has been deleted.`,
+                                icon: "success"
+                            });
+                        }
+                    })
+            }
+        });
+    }
     return (
         <div className="border border-[#dadada]">
             <div className="relative">
@@ -20,7 +52,7 @@ const MyList = ({myList}) => {
                 <Link to={`/update-spot/${_id}`}>
                     <button className="py-2 px-5 bg-light-blue rounded-sm text-white font-macondo text-lg">Update</button>
                 </Link>
-                <button className="py-2 px-5 bg-orange rounded-sm text-white font-macondo text-lg">Delete</button>
+                <button onClick={handleDelete} className="py-2 px-5 bg-orange rounded-sm text-white font-macondo text-lg">Delete</button>
             </div>
         </div>
     );

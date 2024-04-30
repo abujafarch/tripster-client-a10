@@ -1,10 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import MyList from "./MyList";
 import { useLoaderData } from "react-router-dom";
+import { useState } from "react";
 
 const MyLists = () => {
 
     const myLists = useLoaderData()
+    const [newMyLists, setNewMyLists] = useState(myLists)
 
     return (
         <div className="mb-12">
@@ -22,7 +24,7 @@ const MyLists = () => {
             <div className="relative -top-24 bg-white p-3 rounded-md  mt-5 max-w-[1480px] mx-auto px-3">
                 <div className="grid  md-lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-y-7 gap-x-5">
                     {
-                        myLists.map(myList => <MyList key={myList._id} myList={myList}></MyList>)
+                        newMyLists.map(myList => <MyList key={myList._id} newMyLists={newMyLists} setNewMyLists={setNewMyLists} myList={myList}></MyList>)
                     }
                 </div>
             </div>
