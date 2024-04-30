@@ -36,7 +36,7 @@ const AddTouristSpot = () => {
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
-                // form.reset()
+                form.reset()
                 if(data.insertedId){
                     Swal.fire({
                         title: 'Success!',
