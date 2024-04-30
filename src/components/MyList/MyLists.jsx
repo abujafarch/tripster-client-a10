@@ -22,7 +22,7 @@ const MyLists = () => {
             </div>
 
             <div className="relative -top-24 bg-white p-3 rounded-md  mt-5 max-w-[1480px] mx-auto px-3">
-                <div className="grid  md-lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-y-7 gap-x-5">
+                <div className="">
                     {
                         newMyLists.map(myList => <MyList key={myList._id} newMyLists={newMyLists} setNewMyLists={setNewMyLists} myList={myList}></MyList>)
                     }

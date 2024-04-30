@@ -35,20 +35,24 @@ const MyList = ({ myList, setNewMyLists, newMyLists }) => {
         });
     }
     return (
-        <div className="border border-[#dadada]">
-            <div className="relative">
-                <img className="h-[350px] w-full object-cover object-center" src={image} />
-                <div className="absolute left-3 bottom-3 text-white p-3 bg-[#00000050]">
-                    <h2 className="font-platypi text-3xl">${average_cost}</h2>
-                    <p className="font-raleway text-lg font-medium">best for <span className="font-platypi font-semibold">{seasonality}</span></p>
+        <div className="border flex sm:flex-row flex-col sm:gap-0 gap-y-4 justify-between py-2 border-[#dadada]">
+            <div>
+                {/* <div className="relative">
+                    <img className="h-[350px] w-full object-cover object-center" src={image} />
+                    <div className="absolute left-3 bottom-3 text-white p-3 bg-[#00000050]">
+                        <h2 className="font-platypi text-3xl">${average_cost}</h2>
+                        <p className="font-raleway text-lg font-medium">best for <span className="font-platypi font-semibold">{seasonality}</span></p>
+                    </div>
+                </div> */}
+                <h2 className="sm:text-2xl font-bold text-[#474747] px-2 text-xl mt-1 font-poppins">{tourists_spot_name}</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 px-2 gap-x-10 justify-between text-[#8f8f8f] text-base font-poppins">
+                    <p>Visitor: {totalVisitorPerYear}/yr</p>
+                    <p>Time: {travel_time}Days</p>
+                    <p>Cost: ${average_cost}</p>
+                    <p>best for {seasonality}</p>
                 </div>
             </div>
-            <h2 className="sm:text-3xl px-2 text-2xl mt-1 font-platypi">{tourists_spot_name}</h2>
-            <div className="flex my-3 px-2 justify-between font-semibold text-base font-macondo sm:text-lg">
-                <p>Visitor: {totalVisitorPerYear}/yr</p>
-                <p>Time: {travel_time}Days</p>
-            </div>
-            <div className="flex justify-between mx-2 mb-3">
+            <div className="flex sm:flex-col flex-row gap-2 mx-2 ">
                 <Link to={`/update-spot/${_id}`}>
                     <button className="py-2 px-5 bg-light-blue rounded-sm text-white font-macondo text-lg">Update</button>
                 </Link>
