@@ -5,13 +5,23 @@ import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 
 const AllTouristsSpots = () => {
-    const [selectedValue, setSelectedValue] = useState('')
     const touristSpots = useLoaderData()
-    // console.log(touristSpots)
+    const duplicatedTouristSpots = [...touristSpots]
+    const [touristSpotsSort, setTouristSpotsSort] = useState(touristSpots)
+    console.log(touristSpots)
 
-    console.log(selectedValue);
     const handleSelectValue = (e) => {
-        setSelectedValue(e.target.value)
+        if (e.target.value === 'LowToHigh') {
+            duplicatedTouristSpots.sort((a, b) => parseInt(a.average_cost) - parseInt(b.average_cost))
+            setTouristSpotsSort(duplicatedTouristSpots)
+        }
+        else if (e.target.value === 'HighToLow') {
+            duplicatedTouristSpots.sort((a, b) => parseInt(b.average_cost) - parseInt(a.average_cost))
+            setTouristSpotsSort(duplicatedTouristSpots)
+        }
+        else{
+            setTouristSpotsSort(touristSpots)
+        }
     }
 
     return (
@@ -29,18 +39,18 @@ const AllTouristsSpots = () => {
             </div>
 
             <div className="mt-5 max-w-[1480px] mx-auto px-3">
-                <div className="mb-5 w-fit border-2 px-2 py-1 flex justify-between gap-2 items-center border-light-blue relative right-0">
-                    <select onChange={handleSelectValue} className="outline-none cursor-pointer text-lg sort-by font-platypi">
+                <div className="mb-5 w-fit border-2 px-2 py-1 flex justify-between gap-2 items-center border-light-blue rounded-md relative pl-0 right-0">
+                    <select onChange={handleSelectValue} className="outline-none cursor-pointer text-lg sort-by font-raleway font-semibold px-3">
                         <option value="Sort by">Sort by</option>
-                        <option value="Lowest to high">Lowest to high</option>
-                        <option value="Highest to low">Highest to low</option>
+                        <option value="LowToHigh">Lowest to high price</option>
+                        <option value="HighToLow">Highest to low price</option>
                     </select>
                     <p className="text-xl font-bold"><IoIosArrowDown></IoIosArrowDown></p>
                 </div>
 
                 <div className="grid md-lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-y-7 gap-x-5">
                     {
-                        touristSpots.map(touristSpot => <AllTouristSpot touristSpot={touristSpot} key={touristSpot._id}></AllTouristSpot>)
+                        touristSpotsSort.map(touristSpot => <AllTouristSpot touristSpot={touristSpot} key={touristSpot._id}></AllTouristSpot>)
                     }
                     {/* <AllTouristSpot></AllTouristSpot> */}
                 </div>
