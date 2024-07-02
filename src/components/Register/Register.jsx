@@ -12,6 +12,7 @@ import toast from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
 import { Helmet } from "react-helmet-async";
 
+
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false)
     const { createUser, setLoading, auth, setUpdateProfile } = useContext(AuthContext)

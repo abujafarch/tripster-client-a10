@@ -53,18 +53,6 @@ const AuthProvider = ({ children }) => {
         }
     }, [auth, updateProfile])
 
-    // useEffect(() => {
-    //     const unsubscribe = onAuthStateChanged(auth, currentUser => {
-    //         setUser(currentUser)
-    //         setLoading(false)
-    //         console.log('the current user is', currentUser)
-
-    //     })
-
-    //     return () => {
-    //         unsubscribe()
-    //     }
-    // }, [])
 
     const authInfo = { themeChange, setThemeChange, createUser, loading, setLoading, user, loginUser, logOut, auth, setUpdateProfile, googleLogin, githubLogin }
 

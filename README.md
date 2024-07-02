@@ -1,12 +1,27 @@
-# Tripster
-## Southeast Asia
-#### Live Link: https://tripster-e0c28.web.app
+# Tripster - find your south asia destination 
 
-- You can explore awesome places in Southeast Asia.
-- You can add your favorite places that you visited to share other and impress to visit this place
-- If you want you can browse place in country wise
-- There is most attractive feature is that anyone can filter places to see high price to low price and low price to high price
-- If you want to edit any place that you already added to your list then you can do that.
-- In our Home page you can see our top reviews.
-- Our Website has dark and light mode theme. You can use that you are comfortable.
+## Overview
+This is a project that provides detailed information about various tourist places in South Asia. You can know about all destinations in South Asia from here. Anyone can add a new destination here
 
+#### Live URL: https://tripster-e0c28.web.app
+
+## The technology used
+- HTML
+- CSS 
+- Javascript
+- React
+- Firebase
+- Express JS
+- MongoDB
+
+
+### Key Features
+- Anyone can now know and inform others about any tourist destination in South Asia 
+- You can browse tourist places by country
+- Anyone can choose their destination by looking top reviews
+
+### If you want to run the project locally
+- Clone client side and server side repo
+- Set your own github url if you want
+- Set your firebase authentication details in client side repo and also set the MongoDB details in server side repo 
+- Finally you can modify as your wish. 

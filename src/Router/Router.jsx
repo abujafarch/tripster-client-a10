@@ -11,6 +11,8 @@ import UpdateSpot from "../components/UpdateSpot/UpdateSpot";
 import ViewDetails from "../components/ViewDetails/ViewDetails";
 import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
 import CountrySpots from "../components/CountrySpots/CountrySpots";
+import { Suspense } from "react";
+import Loader from "../components/Loader/Loader";
 
 export const router = createBrowserRouter([
     {
@@ -33,7 +35,9 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/add-tourist-spot',
-                element: <PrivetRoute><AddTouristSpot></AddTouristSpot></PrivetRoute>
+                element: <Suspense fallback={<Loader></Loader>}>
+                    <PrivetRoute><AddTouristSpot></AddTouristSpot></PrivetRoute>
+                </Suspense>
             },
             {
                 path: '/all-tourists-spots',
@@ -42,7 +46,9 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/my-lists/:email',
-                element: <PrivetRoute><MyLists></MyLists></PrivetRoute>,
+                element: <Suspense fallback={<Loader></Loader>}>
+                    <PrivetRoute><MyLists></MyLists></PrivetRoute>
+                </Suspense>,
                 loader: ({ params }) => fetch(`https://tripster-server-a10.vercel.app/my-lists/${params.email}`)
             },
             {
