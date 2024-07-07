@@ -3,7 +3,9 @@
 ## Overview
 This is a project that provides detailed information about various tourist places in South Asia. It will help you to know detailed information about all tourist spots in South Asia. It can also be called tourism spot sharing platform. Here anyone can share details about any spot in South Asia.
 
-#### Live URL: https://tripster-e0c28.web.app
+#### Live URL: [Tripster](https://tripster-e0c28.web.app)
+
+#### [Server Side Repository](https://github.com/abujafarch/tripster-server-a10)
 
 ## The technology used
 - HTML
