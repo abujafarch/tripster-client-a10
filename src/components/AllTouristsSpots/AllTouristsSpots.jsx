@@ -40,7 +40,7 @@ const AllTouristsSpots = () => {
 
             <div className="mt-5 max-w-[1480px] mx-auto px-3">
                 <div className="mb-5 w-fit border-2 px-2 py-1 flex justify-between gap-2 items-center border-light-blue rounded-md relative pl-0 right-0">
-                    <select onChange={handleSelectValue} className="outline-none cursor-pointer text-lg sort-by font-raleway font-semibold px-3">
+                    <select onChange={handleSelectValue} className="outline-none cursor-pointer text-lg sort-by font-raleway font-semibold px-3 bg-transparent">
                         <option value="Sort by">Sort by</option>
                         <option value="LowToHigh">Lowest to high price</option>
                         <option value="HighToLow">Highest to low price</option>
