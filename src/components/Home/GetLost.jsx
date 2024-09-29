@@ -8,6 +8,7 @@ const GetLost = () => {
             <div className="relative h-[500px] md:w-1/2">
                 <div className="h-full w-full">
                     <img className="h-full w-full object-cover object-center" src="https://i.ibb.co/xqvd6GN/tiger.jpg"/>
+                    <div className="w-full h-full bg-[#0000003d] absolute top-0 left-0" ></div>
                 </div>
                 <div className="absolute sm:left-9 left-5 bottom-5 sm:bottom-9 text-white">
                     <h3 className="text-4xl font-kaushan mb-2 text-light-blue">New</h3>
@@ -15,9 +16,7 @@ const GetLost = () => {
                     <p className="font-poppins mb-5 text-lg">The Beauty of Sundarban</p>
 
                     <button className="w-16 transition-all ease-in-out duration-500 h-16 text-4xl rounded-full bg-light-blue hover:bg-[#6b6b6b] flex justify-center items-center"><TbPlayerPlay></TbPlayerPlay></button>
-                    {/* <Popup trigger={}>
-                        <h1>hello there</h1>
-                    </Popup> */}
+                    
                 </div>
             </div>
             <div className="md:w-1/2">
