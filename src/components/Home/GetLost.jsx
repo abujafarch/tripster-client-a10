@@ -21,7 +21,7 @@ const GetLost = () => {
             </div>
             <div className="md:w-1/2">
                 <h1 className="md-lg:text-5xl text-4xl font-platypi mb-5 leading-snug md-lg:leading-snug max-w-[580px]">A Simply Perfect Place To Get Lost</h1>
-                <p className="font-macondo font-semibold text-xl text-[#757575]">Treat yourself with a journey to your inner self. Visit a Sundarban and start your spiritual adventure. We promise, you’ll enjoy every step you make.</p>
+                <p className="font-inter font-medium text-lg text-[#757575]">Treat yourself with a journey to your inner self. Visit a Sundarban and start your spiritual adventure. We promise, you’ll enjoy every step you make.</p>
                 <button className="bg-light-blue hover:bg-[#383838] transition-all ease-in-out duration-500 py-2 px-8 mt-6 text-white font-macondo text-xl">See More</button>
             </div>
         </div>

@@ -39,7 +39,7 @@ const Slider = () => {
                         </h1>
                     </div>
                     <div className='max-w-[700px] sm:px-6'>
-                        <p className='object-fill text-white text-lg md:text-xl font-macondo'>Explore diverse destinations, rich cultures, and memorable experiences. Start your adventure today with our curated travel guides</p>
+                        <p className='object-fill text-white md:text-lg font-inter'>Explore diverse destinations, rich cultures, and memorable experiences. Start your adventure today with our curated travel guides</p>
                     </div>
                     <button className='hover:bg-light-blue transition duration-300 ease-in-out px-4 py-2 rounded-[30px] sm:mt-10 mt-6 font-semibold text-lg z-40 text-white hover:text-white border-[3px] border-light-blue'>Explore Now</button>
                 </div>

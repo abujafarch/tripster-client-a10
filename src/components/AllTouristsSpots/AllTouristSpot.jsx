@@ -12,7 +12,7 @@ const AllTouristSpot = ({ touristSpot }) => {
                 </div>
             </div>
             <h2 className="sm:text-3xl px-2 text-2xl mt-1 font-platypi">{tourists_spot_name}</h2>
-            <div className="flex my-3 px-2 justify-between font-semibold text-base font-macondo sm:text-lg">
+            <div className="flex my-3 px-2 justify-between font-semibold text-base font-inter sm:text-lg">
                 <p>Visitor: {totalVisitorPerYear}/yr</p>
                 <p>Time: {travel_time}Days</p>
             </div>

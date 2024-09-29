@@ -38,7 +38,7 @@ const TopReviews = () => {
                                     <FaStar></FaStar>
                                     <FaStar></FaStar>
                                 </div>
-                                <p className=' px-10 font-macondo text-center mt-8 text-lg font-medium text-[#d6d6d6]'>A mesmerizing adventure! Navigating through mangrove forests, spotting elusive tigers, and witnessing diverse wildlife was unforgettable. The tranquility of the rivers and the raw beauty of nature make Sundarbans a must-visit destination for nature enthusiasts</p>
+                                <p className=' px-10 font-inter text-center mt-8 font-medium text-[#d6d6d6]'>A mesmerizing adventure! Navigating through mangrove forests, spotting elusive tigers, and witnessing diverse wildlife was unforgettable. The tranquility of the rivers and the raw beauty of nature make Sundarbans a must-visit destination for nature enthusiasts</p>
                                 <h4 className='text-center font-bebas text-lg tracking-widest text-white mt-6'>Abujafar Chhaleh</h4>
                                 <div className='mt-5 flex justify-center'>
                                     <img className='h-12 object-cover w-12 rounded-full' src="https://i.ibb.co/whW8Hnb/360-F-60785976-MUAspg-GG0-Zccrdc-Xgx-XGR9ih-Q3-Iq-VNHh.jpg" />
@@ -56,7 +56,7 @@ const TopReviews = () => {
                                     <FaStar></FaStar>
                                     <FaStarHalfStroke></FaStarHalfStroke>
                                 </div>
-                                <p className='px-10 font-macondo text-center mt-8 text-lg font-medium text-[#d6d6d6]'>Thailand is a feast for the senses! From the bustling streets of Bangkok to the tranquil beaches of Phuket, every moment is filled with vibrant culture, delicious food, and awe-inspiring temples. A perfect blend of adventure and relaxation.</p>
+                                <p className='px-10 font-inter text-center mt-8 font-medium text-[#d6d6d6]'>Thailand is a feast for the senses! From the bustling streets of Bangkok to the tranquil beaches of Phuket, every moment is filled with vibrant culture, delicious food, and awe-inspiring temples. A perfect blend of adventure and relaxation.</p>
                                 <h4 className='text-center font-bebas text-lg tracking-widest text-white mt-6'>Shezan Normel</h4>
                                 <div className='mt-5 flex justify-center'>
                                     <img className='h-12 object-cover w-12 rounded-full' src="https://i.ibb.co/yXLPgsH/1000-F-147271302-djhdwlc-Ak2-P7n-AAFUWM9-Ehraj-BEb-FSoj.jpg" />
@@ -74,7 +74,7 @@ const TopReviews = () => {
                                     <FaStar></FaStar>
                                     <FaStarHalfStroke></FaStarHalfStroke>
                                 </div>
-                                <p className='px-10 font-macondo text-center mt-8 text-lg font-medium text-[#d6d6d6]'>Vietnam stole my heart! Exploring ancient temples in Hanoi, cruising through Halong Bay's limestone karsts, and savoring pho on the streets of Ho Chi Minh City - each experience left me in awe of Vietnam's beauty and rich history</p>
+                                <p className='px-10 font-inter text-center mt-8 font-medium text-[#d6d6d6]'>Vietnam stole my heart! Exploring ancient temples in Hanoi, cruising through Halong Bay's limestone karsts, and savoring pho on the streets of Ho Chi Minh City - each experience left me in awe of Vietnam's beauty and rich history</p>
                                 <h4 className='text-center font-bebas text-lg tracking-widest text-white mt-6'>Ashiqur Rahman</h4>
                                 <div className='mt-5 flex justify-center'>
                                     <img className='h-12 object-cover w-12 rounded-full' src="https://i.ibb.co/VtD7hs9/images.jpg" />

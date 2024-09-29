@@ -11,7 +11,7 @@ const Country = ({ country }) => {
                         <h1 className="font-platypi text-4xl font-bold mb-3">{country_name}</h1>
                     </Slide>
                     <Fade delay={500} cascade damping={1e-1}>
-                        <p className="font-macondo text-lg">{description}</p>
+                        <p className="font-platypi">{description}</p>
                     </Fade>
                 </div>
             </div>

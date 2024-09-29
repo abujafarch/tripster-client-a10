@@ -55,7 +55,7 @@ const Navbar = () => {
                         <div className="skeleton w-28 md-lg:block hidden rounded-md h-10"></div>
                         <div className="skeleton w-9 rounded-full h-9"></div>
                     </div>
-                    : <div className='flex gap-5 text-lg font-macondo text-[#264653] items-center'>
+                    : <div className='flex gap-5 text-lg font-inter text-[#264653] items-center'>
                         <div className={`flex flex-col fixed -top-7 ${showMenu ? 'left-0' : '-left-80'} transition-all font-semibold duration-400 z-20 bg-white h-screen gap-4 text-lg shadow-2xl text-light-blue md-lg:gap-5 md-lg:bg-transparent md-lg:p-0 p-5 md-lg:h-fit md-lg:items-center md-lg:static md-lg:flex-row md-lg:transition-none md-lg:w-full w-60 md-lg:shadow-none`}>
                             <button onClick={handleCloseMenu} className="text-2xl md-lg:hidden flex justify-end">
                                 <RxCross2></RxCross2>
